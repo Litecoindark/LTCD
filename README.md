@@ -1,7 +1,7 @@
 LitecoinDark integration/staging tree
 ================================
 
-Copyright (c) 2014-2014 LitecoinDark Developers
+Copyright (c) 2014 LitecoinDark Developers
 
 What is LitecoinDark?
 ----------------
