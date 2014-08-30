@@ -11,8 +11,6 @@ LitecoinDark is a lite version of Bitcoin using scrypt as a proof-of-work algori
  - 1 minute block targets
  - subsidy halves in 12813 blocks 
  - ~82 million total coins
-
-The rest is the same as Bitcoin.
  - 3200 coins per block
  - 5 hours retarget difficulty
 
