@@ -1,7 +1,7 @@
 LitecoinDark Unofficial staging/development tree
-================================
+=======
 
-Copyright (c) 2014 LitecoinDark Developers
+Copyright (c) 2014 LitecoinDark Developers (POD-CryptoAsian)
 Copyright (c) 2014 Glenn Allen (TrollByFire)
 
 What is LitecoinDark?
