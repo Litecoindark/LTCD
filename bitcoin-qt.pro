@@ -242,6 +242,7 @@ SOURCES += src/qt/bitcoin.cpp \
     src/netbase.cpp \
     src/key.cpp \
     src/script.cpp \
+    src/diffshield.cpp \
     src/main.cpp \
     src/init.cpp \
     src/net.cpp \
