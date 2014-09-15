@@ -18,31 +18,49 @@ class CBlockHeader;
 
 #define SHIELD_FORK_TARGET 20000
 
-/**
- *
- */
-class DifficultyShield
+namespace litecoindark
 {
-public:
-	DifficultyShield();
+	namespace difficulty_shield
+	{
+		class difficulty_engine
+		{
+		protected:
 
-	// Timespan
+			// Timespan
+			const int64 target_timespan;
 
-	const int64 target_timespan;	// Timespan between difficulty adjustments
+			// Spacing
+			const int64 target_spacing;
 
-	// Spacing
+			// Interval
+			int64 interval;
 
-	const int64 target_spacing; // Target block spacing
+		public:
+			difficulty_engine();
+			virtual ~difficulty_engine();
 
-	// Interval
+			unsigned compute_min_work(unsigned base, int64 time);
+			virtual unsigned get_next_work_required(const CBlockIndex* last_index, const CBlockHeader* block) = 0;
+		};
 
-	int64 interval;
+		class legacy_difficulty_engine : public difficulty_engine
+		{
+		public:
+			legacy_difficulty_engine();
+			virtual ~legacy_difficulty_engine();
 
-	unsigned int ComputeMinWork(unsigned int nBase, int64 nTime);
-	virtual unsigned GetNextWorkRequired(const CBlockIndex* last_index, const CBlockHeader* block);
+			virtual unsigned get_next_work_required(const CBlockIndex* last_index, const CBlockHeader* block);
+		};
 
-};
+		class litecoindark_difficulty_engine : public difficulty_engine
+		{
+		public:
+			litecoindark_difficulty_engine();
+			virtual ~litecoindark_difficulty_engine();
 
-
+			virtual unsigned get_next_work_required(const CBlockIndex* last_index, const CBlockHeader* block);
+		};
+	}
+}
 
 #endif /* DIFFSHIELD_H_ */

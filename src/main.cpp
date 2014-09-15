@@ -58,7 +58,8 @@ unsigned int nCoinCacheSize = 5000;
 
 // LitecoinDark DifficultyShield
 
-DifficultyShield difficulty_shield;
+litecoindark::difficulty_shield::legacy_difficulty_engine legacy_difficulty;
+litecoindark::difficulty_shield::litecoindark_difficulty_engine ltcd_difficulty;
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
 int64 CTransaction::nMinTxFee = 100000;
@@ -1124,14 +1125,27 @@ static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 //
 unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
 {
-	// LitecoinDark: Call through to shield class
-	return difficulty_shield.ComputeMinWork(nBase, nTime);
+	if (false)
+	{
+		// LitecoinDark: Call through to shield class
+		return ltcd_difficulty.compute_min_work(nBase, nTime);
+	}
+	else
+	{
+		return legacy_difficulty.compute_min_work(nBase, nTime);
+	}
 }
 
 unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
-	// Activate shield at the target block
-	return difficulty_shield.GetNextWorkRequired(pindexLast, pblock);
+	if (false)
+	{
+		return ltcd_difficulty.get_next_work_required(pindexLast, pblock);
+	}
+	else
+	{
+		return legacy_difficulty.get_next_work_required(pindexLast, pblock);
+	}
 }
 
 bool CheckProofOfWork(uint256 hash, unsigned int nBits)
