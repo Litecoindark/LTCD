@@ -13,6 +13,11 @@
 
 #include "uint256.h"
 
+class CBlockIndex;
+class CBlockHeader;
+
+#define SHIELD_FORK_TARGET 20000
+
 /**
  *
  */
@@ -34,6 +39,7 @@ public:
 	int64 interval;
 
 	unsigned int ComputeMinWork(unsigned int nBase, int64 nTime);
+	virtual unsigned GetNextWorkRequired(const CBlockIndex* last_index, const CBlockHeader* block);
 
 };
 
