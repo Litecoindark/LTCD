@@ -35,8 +35,13 @@ namespace litecoindark
 			// Interval
 			int64 interval;
 
+		protected:
+
+
 		public:
 			difficulty_engine();
+			difficulty_engine(int64 timespan, int64 spacing, int64 adj_interval);
+
 			virtual ~difficulty_engine();
 
 			unsigned compute_min_work(unsigned base, int64 time);
@@ -46,7 +51,8 @@ namespace litecoindark
 		class legacy_difficulty_engine : public difficulty_engine
 		{
 		public:
-			legacy_difficulty_engine();
+			legacy_difficulty_engine(int64 timespan, int64 spacing, int64 adj_interval);
+
 			virtual ~legacy_difficulty_engine();
 
 			virtual unsigned get_next_work_required(const CBlockIndex* last_index, const CBlockHeader* block);
@@ -57,6 +63,18 @@ namespace litecoindark
 		public:
 			litecoindark_difficulty_engine();
 			virtual ~litecoindark_difficulty_engine();
+
+			virtual unsigned get_next_work_required(const CBlockIndex* last_index, const CBlockHeader* block);
+		};
+
+		class kgw_difficulty_engine : public difficulty_engine
+		{
+			uint64 past_blocks_min;
+			uint64 past_blocks_max;
+
+		public:
+			kgw_difficulty_engine(int64 spacing, uint64 past_blocks_minimum, uint64 past_blocks_maximum);
+			virtual ~kgw_difficulty_engine();
 
 			virtual unsigned get_next_work_required(const CBlockIndex* last_index, const CBlockHeader* block);
 		};

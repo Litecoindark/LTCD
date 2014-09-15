@@ -25,11 +25,20 @@ namespace litecoindark
 {
 	namespace difficulty_shield
 	{
-		difficulty_engine::difficulty_engine() :
+		difficulty_engine::difficulty_engine()
+			:
 			target_timespan(nTargetTimespan),
 			target_spacing(nTargetSpacing),
 			interval(nInterval)
 		{}
+
+		difficulty_engine::difficulty_engine(int64 timespan, int64 spacing, int64 adj_interval)
+		:
+			target_timespan(timespan),
+			target_spacing(spacing),
+			interval(adj_interval)
+		{}
+
 
 		difficulty_engine::~difficulty_engine(){}
 
@@ -58,8 +67,9 @@ namespace litecoindark
 		}
 
 
-		legacy_difficulty_engine::legacy_difficulty_engine()
-		{}
+		legacy_difficulty_engine::legacy_difficulty_engine(int64 timespan, int64 spacing, int64 adj_interval)
+			:
+			difficulty_engine(timespan, spacing, adj_interval){}
 
 		legacy_difficulty_engine::~legacy_difficulty_engine() {}
 
@@ -206,6 +216,117 @@ namespace litecoindark
 			printf("After:  %08x  %s\n", bnNew.GetCompact(), bnNew.getuint256().ToString().c_str());
 
 			return bnNew.GetCompact();
+		}
+
+		kgw_difficulty_engine::kgw_difficulty_engine(int64 spacing, uint64 past_blocks_minimum, uint64 past_blocks_maximum)
+			:
+			difficulty_engine(nTargetTimespan, spacing, nInterval),
+			past_blocks_min(past_blocks_minimum),
+			past_blocks_max(past_blocks_maximum)
+		{
+
+		}
+
+		kgw_difficulty_engine::~kgw_difficulty_engine(){}
+
+		unsigned kgw_difficulty_engine::get_next_work_required(const CBlockIndex* pindexLast, const CBlockHeader* pblock)
+		{
+
+			/* current difficulty formula, megacoin - kimoto gravity well */
+			const CBlockIndex  *BlockLastSolved                                = pindexLast;
+			const CBlockIndex  *BlockReading                                = pindexLast;
+			const CBlockHeader *BlockCreating                                = pblock;
+													BlockCreating                                = BlockCreating;
+			uint64                                PastBlocksMass                                = 0;
+			int64                                PastRateActualSeconds                = 0;
+			int64                                PastRateTargetSeconds                = 0;
+			double                                PastRateAdjustmentRatio                = double(1);
+			CBigNum                                PastDifficultyAverage;
+			CBigNum                                PastDifficultyAveragePrev;
+			double                                EventHorizonDeviation;
+			double                                EventHorizonDeviationFast;
+			double                                EventHorizonDeviationSlow;
+
+		    if (BlockLastSolved == NULL || BlockLastSolved->nHeight == 0 || (uint64)BlockLastSolved->nHeight < past_blocks_min)
+		    {
+		    	return bnProofOfWorkLimit.GetCompact();
+		    }
+
+			for (unsigned int i = 1; BlockReading && BlockReading->nHeight > 0; i++)
+			{
+				if (past_blocks_max > 0 && i > past_blocks_max)
+				{
+					break;
+				}
+
+				PastBlocksMass++;
+
+				if (i == 1)
+				{
+					PastDifficultyAverage.SetCompact(BlockReading->nBits);
+				}
+				else
+				{
+					PastDifficultyAverage = ((CBigNum().SetCompact(BlockReading->nBits) - PastDifficultyAveragePrev) / i) + PastDifficultyAveragePrev;
+				}
+
+				PastDifficultyAveragePrev = PastDifficultyAverage;
+
+				PastRateActualSeconds                        = BlockLastSolved->GetBlockTime() - BlockReading->GetBlockTime();
+				PastRateTargetSeconds                        = target_spacing * PastBlocksMass;
+				PastRateAdjustmentRatio                        = double(1);
+
+				if (PastRateActualSeconds < 0)
+				{
+					PastRateActualSeconds = 0;
+				}
+
+				if (PastRateActualSeconds != 0 && PastRateTargetSeconds != 0)
+				{
+					PastRateAdjustmentRatio                        = double(PastRateTargetSeconds) / double(PastRateActualSeconds);
+				}
+
+				EventHorizonDeviation     = 1 + (0.7084 * pow((double(PastBlocksMass)/double(144)), -1.228));
+				EventHorizonDeviationFast = EventHorizonDeviation;
+				EventHorizonDeviationSlow = 1 / EventHorizonDeviation;
+
+				if (PastBlocksMass >= past_blocks_min)
+				{
+					if ((PastRateAdjustmentRatio <= EventHorizonDeviationSlow) || (PastRateAdjustmentRatio >= EventHorizonDeviationFast))
+					{
+						assert(BlockReading);
+						break;
+					}
+				}
+				if (BlockReading->pprev == nullptr)
+				{
+					assert(BlockReading);
+					break;
+				}
+
+				BlockReading = BlockReading->pprev;
+			}
+
+			CBigNum bnNew(PastDifficultyAverage);
+
+			if (PastRateActualSeconds != 0 && PastRateTargetSeconds != 0)
+			{
+					bnNew *= PastRateActualSeconds;
+					bnNew /= PastRateTargetSeconds;
+			}
+
+		    if (bnNew > bnProofOfWorkLimit)
+		    {
+		    	bnNew = bnProofOfWorkLimit;
+		    }
+
+		    /// debug print
+		    printf("Difficulty Retarget - Kimoto Gravity Well\n");
+		    printf("PastRateAdjustmentRatio = %g\n", PastRateAdjustmentRatio);
+		    printf("Before: %08x  %s\n", BlockLastSolved->nBits, CBigNum().SetCompact(BlockLastSolved->nBits).getuint256().ToString().c_str());
+		    printf("After:  %08x  %s\n", bnNew.GetCompact(), bnNew.getuint256().ToString().c_str());
+
+		    return bnNew.GetCompact();
 		}
 	}
 }

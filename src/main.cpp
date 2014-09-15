@@ -58,8 +58,27 @@ unsigned int nCoinCacheSize = 5000;
 
 // LitecoinDark DifficultyShield
 
-litecoindark::difficulty_shield::legacy_difficulty_engine legacy_difficulty;
-litecoindark::difficulty_shield::litecoindark_difficulty_engine ltcd_difficulty;
+// Legacy difficulty adjustments
+
+static const int64 nTargetTimespan = 18000;
+static const int64 nTargetSpacing = 60;
+static const int64 nInterval = nTargetTimespan / nTargetSpacing;
+
+// KGW specifics
+
+const int64			BlocksTargetSpacing			= 60;
+const unsigned		TimeDaySeconds 				= 60 * 60 * 24;
+int64				PastSecondsMin				= TimeDaySeconds * 0.25;
+int64				PastSecondsMax				= TimeDaySeconds * 7;
+uint64				PastBlocksMin				= PastSecondsMin / BlocksTargetSpacing;
+uint64				PastBlocksMax				= PastSecondsMax / BlocksTargetSpacing;
+
+
+#define KGW_ACTIVATION_BLOCK 16300
+
+litecoindark::difficulty_shield::legacy_difficulty_engine		legacy_difficulty(nTargetTimespan, nTargetSpacing, nInterval);
+litecoindark::difficulty_shield::kgw_difficulty_engine			kgw_difficulty(nTargetSpacing, PastBlocksMin, PastBlocksMax);
+litecoindark::difficulty_shield::litecoindark_difficulty_engine	ltcd_difficulty;
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
 int64 CTransaction::nMinTxFee = 100000;
@@ -1105,19 +1124,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     return nSubsidy + nFees;
 }
 
-/* Litecoin difficulty adjustments
-static const int64 nTargetTimespan = 3.5 * 24 * 60 * 60; // LitecoinDark: 3.5 days
-static const int64 nTargetSpacing = 2.5 * 60; // LitecoinDark: 2.5 minutes
 
-*/
-
-// LitecoinDark difficulty adjustments
-// TODO: Adjust this with a better algorithm
-
-static const int64 nTargetTimespan = 18000;
-static const int64 nTargetSpacing = 60;
-
-static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 //
 // minimum amount of work that could possibly be required nTime after
@@ -1125,15 +1132,7 @@ static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 //
 unsigned int ComputeMinWork(unsigned int nBase, int64 nTime)
 {
-	if (false)
-	{
-		// LitecoinDark: Call through to shield class
-		return ltcd_difficulty.compute_min_work(nBase, nTime);
-	}
-	else
-	{
-		return legacy_difficulty.compute_min_work(nBase, nTime);
-	}
+	return legacy_difficulty.compute_min_work(nBase, nTime);
 }
 
 unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
@@ -1141,6 +1140,10 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
 	if (false)
 	{
 		return ltcd_difficulty.get_next_work_required(pindexLast, pblock);
+	}
+	else if (pindexLast->nHeight + 1 >= KGW_ACTIVATION_BLOCK)
+	{
+		return kgw_difficulty.get_next_work_required(pindexLast, pblock);
 	}
 	else
 	{
