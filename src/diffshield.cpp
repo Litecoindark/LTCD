@@ -21,7 +21,6 @@ extern bool fTestNet;
 extern int nHeight;
 
 DifficultyShield::DifficultyShield() :
-		activation_block_index(SHIELD_FORK_TARGET),
 		target_timespan(nTargetTimespan),
 		target_spacing(nTargetSpacing),
 		interval(nInterval)
