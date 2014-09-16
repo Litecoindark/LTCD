@@ -4,12 +4,12 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Litecoin</source>
+        <source>About LitecoinDark</source>
         <translation>Om LitecoinDark</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Litecoin&lt;/b&gt; version</source>
+        <source>&lt;b&gt;LitecoinDark&lt;/b&gt; version</source>
         <translation>&lt;b&gt;LitecoinDark&lt;/b&gt; version</translation>
     </message>
     <message>
@@ -34,7 +34,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location line="+0"/>
-        <source>The Litecoin developers</source>
+        <source>The LitecoinDark developers</source>
         <translation>LitecoinDark-udviklerne</translation>
     </message>
 </context>
@@ -67,7 +67,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Litecoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <source>These are your LitecoinDark addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
         <translation>Dette er dine LitecoinDark-adresser til at modtage betalinger med. Du kan give en forskellig adresse til hver afsender, så du kan holde styr på, hvem der betaler dig.</translation>
     </message>
     <message>
@@ -82,7 +82,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Litecoin address</source>
+        <source>Sign a message to prove you own a LitecoinDark address</source>
         <translation>Underskriv en besked for at bevise, at en LitecoinDark-adresse tilhører dig</translation>
     </message>
     <message>
@@ -107,7 +107,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Litecoin address</source>
+        <source>Verify a message to ensure it was signed with a specified LitecoinDark address</source>
         <translation>Efterprøv en besked for at sikre, at den er underskrevet med den angivne LitecoinDark-adresse</translation>
     </message>
     <message>
@@ -122,8 +122,8 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Litecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Disse er dine LitecoinDark-adresser for at sende betalinger. Tjek altid beløb og modtageradresse, inden du sender LitecoinDarks.</translation>
+        <source>These are your LitecoinDark addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Disse er dine LitecoinDark-adresser for at sende betalinger. Tjek altid beløb og modtageradresse, inden du sender litecoindarks.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -138,7 +138,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     <message>
         <location line="+1"/>
         <source>Send &amp;Coins</source>
-        <translation>Send LitecoinDarks</translation>
+        <translation>Send litecoindarks</translation>
     </message>
     <message>
         <location line="+260"/>
@@ -249,7 +249,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     <message>
         <location line="+1"/>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINS&lt;/b&gt;!</source>
-        <translation>Advarsel: Hvis du krypterer din tegnebog og mister din adgangskode, vil du &lt;b&gt;MISTE ALLE DINE LitecoinDarkS&lt;/b&gt;!</translation>
+        <translation>Advarsel: Hvis du krypterer din tegnebog og mister din adgangskode, vil du &lt;b&gt;MISTE ALLE DINE LITECOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -275,8 +275,8 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location line="-56"/>
-        <source>Litecoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoins from being stolen by malware infecting your computer.</source>
-        <translation>LitecoinDark vil nu lukke for at gennemføre krypteringsprocessen. Husk på, at kryptering af din tegnebog vil ikke beskytte dine LitecoinDarks fuldt ud mod at blive stjålet af malware på din computer.</translation>
+        <source>LitecoinDark will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your litecoindarks from being stolen by malware infecting your computer.</source>
+        <translation>LitecoinDark vil nu lukke for at gennemføre krypteringsprocessen. Husk på, at kryptering af din tegnebog vil ikke beskytte dine litecoindarks fuldt ud mod at blive stjålet af malware på din computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -374,7 +374,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Litecoin</source>
+        <source>Show information about LitecoinDark</source>
         <translation>Vis informationer om LitecoinDark</translation>
     </message>
     <message>
@@ -419,12 +419,12 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a Litecoin address</source>
-        <translation>Send LitecoinDarks til en LitecoinDark-adresse</translation>
+        <source>Send coins to a LitecoinDark address</source>
+        <translation>Send litecoindarks til en LitecoinDark-adresse</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Litecoin</source>
+        <source>Modify configuration options for LitecoinDark</source>
         <translation>Rediger konfigurationsindstillinger af LitecoinDark</translation>
     </message>
     <message>
@@ -455,7 +455,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>Litecoin</source>
+        <source>LitecoinDark</source>
         <translation>LitecoinDark</translation>
     </message>
     <message>
@@ -480,7 +480,7 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About Litecoin</source>
+        <source>&amp;About LitecoinDark</source>
         <translation>Om LitecoinDark</translation>
     </message>
     <message>
@@ -500,12 +500,12 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Litecoin addresses to prove you own them</source>
+        <source>Sign messages with your LitecoinDark addresses to prove you own them</source>
         <translation>Underskriv beskeder med dine LitecoinDark-adresser for at bevise, at de tilhører dig</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Litecoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified LitecoinDark addresses</source>
         <translation>Efterprøv beskeder for at sikre, at de er underskrevet med de(n) angivne LitecoinDark-adresse(r)</translation>
     </message>
     <message>
@@ -536,12 +536,12 @@ Produktet indeholder software som er udviklet af OpenSSL Project til brug i Open
     </message>
     <message>
         <location line="+47"/>
-        <source>Litecoin client</source>
+        <source>LitecoinDark client</source>
         <translation>LitecoinDark-klient</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Litecoin network</source>
+        <source>%n active connection(s) to LitecoinDark network</source>
         <translation><numerusform>%n aktiv(e) forbindelse(r) til LitecoinDark-netværket</numerusform><numerusform>%n aktiv(e) forbindelse(r) til LitecoinDark-netværket</numerusform></translation>
     </message>
     <message>
@@ -656,7 +656,7 @@ Adresse: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Litecoin address or malformed URI parameters.</source>
+        <source>URI can not be parsed! This can be caused by an invalid LitecoinDark address or malformed URI parameters.</source>
         <translation>URI kan ikke fortolkes! Dette kan skyldes en ugyldig LitecoinDark-adresse eller misdannede URI-parametre.</translation>
     </message>
     <message>
@@ -671,7 +671,7 @@ Adresse: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Litecoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. LitecoinDark can no longer continue safely and will quit.</source>
         <translation>Der opstod en fatal fejl. LitecoinDark kan ikke længere fortsætte sikkert og vil afslutte.</translation>
     </message>
 </context>
@@ -737,7 +737,7 @@ Adresse: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Litecoin address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid LitecoinDark address.</source>
         <translation>Den indtastede adresse &quot;%1&quot; er ikke en gyldig LitecoinDark-adresse.</translation>
     </message>
     <message>
@@ -756,7 +756,7 @@ Adresse: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Litecoin-Qt</source>
+        <source>LitecoinDark-Qt</source>
         <translation>LitecoinDark-Qt</translation>
     </message>
     <message>
@@ -819,12 +819,12 @@ Adresse: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Litecoin after logging in to the system.</source>
+        <source>Automatically start LitecoinDark after logging in to the system.</source>
         <translation>Start LitecoinDark automatisk, når der logges ind på systemet</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Litecoin on system login</source>
+        <source>&amp;Start LitecoinDark on system login</source>
         <translation>Start LitecoinDark, når systemet startes</translation>
     </message>
     <message>
@@ -844,7 +844,7 @@ Adresse: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Litecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the LitecoinDark client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Åbn LitecoinDark-klientens port på routeren automatisk. Dette virker kun, når din router understøtter UPnP og UPnP er aktiveret.</translation>
     </message>
     <message>
@@ -854,7 +854,7 @@ Adresse: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Litecoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the LitecoinDark network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation>Opret forbindelse til LitecoinDark-netværket via en SOCKS-proxy (f.eks. ved tilslutning gennem Tor)</translation>
     </message>
     <message>
@@ -929,7 +929,7 @@ Adresse: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Litecoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting LitecoinDark.</source>
         <translation>Brugergrænsefladesproget kan angives her. Denne indstilling træder først i kraft, når LitecoinDark genstartes.</translation>
     </message>
     <message>
@@ -940,11 +940,11 @@ Adresse: %4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Vælg den standard underopdelingsenhed, som skal vises i brugergrænsefladen og ved afsendelse af LitecoinDarks.</translation>
+        <translation>Vælg den standard underopdelingsenhed, som skal vises i brugergrænsefladen og ved afsendelse af litecoindarks.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Litecoin addresses in the transaction list or not.</source>
+        <source>Whether to show LitecoinDark addresses in the transaction list or not.</source>
         <translation>Afgør hvorvidt LitecoinDark-adresser skal vises i transaktionslisten eller ej.</translation>
     </message>
     <message>
@@ -996,7 +996,7 @@ Adresse: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Litecoin.</source>
+        <source>This setting will take effect after restarting LitecoinDark.</source>
         <translation>Denne indstilling træder i kraft, efter LitecoinDark genstartes.</translation>
     </message>
     <message>
@@ -1015,7 +1015,7 @@ Adresse: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Litecoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LitecoinDark network after a connection is established, but this process has not completed yet.</source>
         <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med LitecoinDark-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
     </message>
     <message>
@@ -1069,8 +1069,8 @@ Adresse: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start litecoin: click-to-pay handler</source>
-        <translation>Kan ikke starte LitecoinDark: click-to-pay-håndtering</translation>
+        <source>Cannot start litecoindark: click-to-pay handler</source>
+        <translation>Kan ikke starte litecoindark: click-to-pay-håndtering</translation>
     </message>
 </context>
 <context>
@@ -1219,7 +1219,7 @@ Adresse: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Litecoin-Qt help message to get a list with possible Litecoin command-line options.</source>
+        <source>Show the LitecoinDark-Qt help message to get a list with possible LitecoinDark command-line options.</source>
         <translation>Vis LitecoinDark-Qt-hjælpebeskeden for at få en liste over de tilgængelige LitecoinDark-kommandolinjeindstillinger.</translation>
     </message>
     <message>
@@ -1239,12 +1239,12 @@ Adresse: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Litecoin - Debug window</source>
+        <source>LitecoinDark - Debug window</source>
         <translation>LitecoinDark - Fejlsøgningsvindue</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Litecoin Core</source>
+        <source>LitecoinDark Core</source>
         <translation>LitecoinDark Core</translation>
     </message>
     <message>
@@ -1254,7 +1254,7 @@ Adresse: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Litecoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the LitecoinDark debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>Åbn LitecoinDark-fejlsøgningslogfilen fra det nuværende datakatalog. Dette kan tage nogle få sekunder for en store logfiler.</translation>
     </message>
     <message>
@@ -1264,7 +1264,7 @@ Adresse: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Litecoin RPC console.</source>
+        <source>Welcome to the LitecoinDark RPC console.</source>
         <translation>Velkommen til LitecoinDark RPC-konsollen</translation>
     </message>
     <message>
@@ -1290,7 +1290,7 @@ Adresse: %4
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Send LitecoinDarks</translation>
+        <translation>Send litecoindarks</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -1340,7 +1340,7 @@ Adresse: %4
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>Bekræft afsendelse af LitecoinDarks</translation>
+        <translation>Bekræft afsendelse af litecoindarks</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1385,7 +1385,7 @@ Adresse: %4
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Fejl: Transaktionen blev afvist. Dette kan ske, hvis nogle af dine LitecoinDarks i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine LitecoinDarks er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
+        <translation>Fejl: Transaktionen blev afvist. Dette kan ske, hvis nogle af dine litecoindarks i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine litecoindarks er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
     </message>
 </context>
 <context>
@@ -1448,7 +1448,7 @@ Adresse: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Litecoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <source>Enter a LitecoinDark address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
         <translation>Indtast en LitecoinDark-adresse (f.eks. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
 </context>
@@ -1513,7 +1513,7 @@ Adresse: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Litecoin address</source>
+        <source>Sign the message to prove you own this LitecoinDark address</source>
         <translation>Underskriv denne besked for at bevise, at LitecoinDark-adressen tilhører dig</translation>
     </message>
     <message>
@@ -1549,7 +1549,7 @@ Adresse: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Litecoin address</source>
+        <source>Verify the message to ensure it was signed with the specified LitecoinDark address</source>
         <translation>Efterprøv beskeden for at sikre, at den er underskrevet med den angivne LitecoinDark-adresse</translation>
     </message>
     <message>
@@ -1565,7 +1565,7 @@ Adresse: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Litecoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <source>Enter a LitecoinDark address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
         <translation>Indtast en LitecoinDark-adresse (f.eks. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
@@ -1575,7 +1575,7 @@ Adresse: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Litecoin signature</source>
+        <source>Enter LitecoinDark signature</source>
         <translation>Indtast LitecoinDark-underskriften</translation>
     </message>
     <message>
@@ -1649,7 +1649,7 @@ Adresse: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Litecoin developers</source>
+        <source>The LitecoinDark developers</source>
         <translation>LitecoinDark-udviklerne</translation>
     </message>
     <message>
@@ -1784,7 +1784,7 @@ Adresse: %4
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Genererede LitecoinDarks skal vente 120 blokke, før de kan blive brugt. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det mislykkes at komme ind i kæden, vil den skifte til &quot;ikke godkendt&quot; og ikke blive kunne bruges. Dette kan lejlighedsvis ske, hvis en anden knude genererer en blok inden for få sekunder af din.</translation>
+        <translation>Genererede litecoindarks skal vente 120 blokke, før de kan blive brugt. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det mislykkes at komme ind i kæden, vil den skifte til &quot;ikke godkendt&quot; og ikke blive kunne bruges. Dette kan lejlighedsvis ske, hvis en anden knude genererer en blok inden for få sekunder af din.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2137,7 +2137,7 @@ Adresse: %4
     <message>
         <location filename="../walletmodel.cpp" line="+193"/>
         <source>Send Coins</source>
-        <translation>Send LitecoinDarks</translation>
+        <translation>Send litecoindarks</translation>
     </message>
 </context>
 <context>
@@ -2187,7 +2187,7 @@ Adresse: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>Litecoin version</source>
+        <source>LitecoinDark version</source>
         <translation>LitecoinDark-version</translation>
     </message>
     <message>
@@ -2197,8 +2197,8 @@ Adresse: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or litecoind</source>
-        <translation>Send kommando til -server eller LitecoinDarkd</translation>
+        <source>Send command to -server or litecoindarkd</source>
+        <translation>Send kommando til -server eller litecoindarkd</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2217,13 +2217,13 @@ Adresse: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: litecoin.conf)</source>
-        <translation>Angiv konfigurationsfil (standard: LitecoinDark.conf)</translation>
+        <source>Specify configuration file (default: litecoindark.conf)</source>
+        <translation>Angiv konfigurationsfil (standard: litecoindark.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: litecoind.pid)</source>
-        <translation>Angiv pid-fil (default: LitecoinDarkd.pid)</translation>
+        <source>Specify pid file (default: litecoindarkd.pid)</source>
+        <translation>Angiv pid-fil (default: litecoindarkd.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2300,24 +2300,24 @@ Adresse: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=litecoinrpc
+rpcuser=litecoindarkrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Litecoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;LitecoinDark Alert&quot; admin@foo.com
 </source>
         <translation>%s, du skal angive en RPC-adgangskode i konfigurationsfilen:
 %s
 Det anbefales, at du bruger nedenstående, tilfældige adgangskode:
-rpcuser=litecoinrpc
+rpcuser=litecoindarkrpc
 rpcpassword=%s
 (du behøver ikke huske denne adgangskode)
 Brugernavnet og adgangskode MÅ IKKE være det samme.
 Hvis filen ikke eksisterer, opret den og giv ingen andre end ejeren læserettighed.
 Det anbefales også at angive alertnotify, så du påmindes om problemer;
-f.eks.: alertnotify=echo %%s | mail -s &quot;Litecoin Alert&quot; admin@foo.com
+f.eks.: alertnotify=echo %%s | mail -s &quot;LitecoinDark Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2332,18 +2332,18 @@ f.eks.: alertnotify=echo %%s | mail -s &quot;Litecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Litecoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. LitecoinDark is probably already running.</source>
         <translation>Kan ikke opnå lås på datakatalog %s. LitecoinDark er sandsynligvis allerede startet.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Fejl: Transaktionen blev afvist. Dette kan ske, hvis nogle af dine LitecoinDarks i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine LitecoinDarks er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
+        <translation>Fejl: Transaktionen blev afvist. Dette kan ske, hvis nogle af dine litecoindarks i din tegnebog allerede er brugt, som hvis du brugte en kopi af wallet.dat og dine litecoindarks er blevet brugt i kopien, men ikke er markeret som brugt her.</translation>
     </message>
     <message>
         <location line="+4"/>
         <source>Error: This transaction requires a transaction fee of at least %s because of its amount, complexity, or use of recently received funds!</source>
-        <translation>Fejl: Denne transaktion kræver et transaktionsgebyr på minimum %s pga. dens størrelse, kompleksitet eller anvendelse af nyligt modtagne LitecoinDarks!</translation>
+        <translation>Fejl: Denne transaktion kræver et transaktionsgebyr på minimum %s pga. dens størrelse, kompleksitet eller anvendelse af nyligt modtagne litecoindarks!</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2377,7 +2377,7 @@ f.eks.: alertnotify=echo %%s | mail -s &quot;Litecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Litecoin will not work properly.</source>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong LitecoinDark will not work properly.</source>
         <translation>Advarsel: Undersøg venligst, at din computers dato og klokkeslæt er korrekt indstillet! Hvis der er fejl i disse, vil LitecoinDark ikke fungere korrekt.</translation>
     </message>
     <message>
@@ -2498,7 +2498,7 @@ f.eks.: alertnotify=echo %%s | mail -s &quot;Litecoin Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Failed to write to coin database</source>
-        <translation>Skrivning af LitecoinDark-database mislykkedes</translation>
+        <translation>Skrivning af litecoindark-database mislykkedes</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2518,7 +2518,7 @@ f.eks.: alertnotify=echo %%s | mail -s &quot;Litecoin Alert&quot; admin@foo.com
     <message>
         <location line="+1"/>
         <source>Generate coins (default: 0)</source>
-        <translation>Generer LitecoinDarks (standard: 0)</translation>
+        <translation>Generer litecoindarks (standard: 0)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -2627,7 +2627,7 @@ f.eks.: alertnotify=echo %%s | mail -s &quot;Litecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Litecoin Wiki for SSL setup instructions)</source>
+        <source>SSL options: (see the LitecoinDark Wiki for SSL setup instructions)</source>
         <translation>SSL-indstillinger: (se LitecoinDark Wiki for SSL-opsætningsinstruktioner)</translation>
     </message>
     <message>
@@ -2817,12 +2817,12 @@ f.eks.: alertnotify=echo %%s | mail -s &quot;Litecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Litecoin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of LitecoinDark</source>
         <translation>Fejl ved indlæsning af wallet.dat: Tegnebog kræver en nyere version af LitecoinDark</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Litecoin to complete</source>
+        <source>Wallet needed to be rewritten: restart LitecoinDark to complete</source>
         <translation>Det var nødvendigt at genskrive tegnebogen: genstart LitecoinDark for at gennemføre</translation>
     </message>
     <message>
@@ -2882,7 +2882,7 @@ f.eks.: alertnotify=echo %%s | mail -s &quot;Litecoin Alert&quot; admin@foo.com
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Litecoin is probably already running.</source>
+        <source>Unable to bind to %s on this computer. LitecoinDark is probably already running.</source>
         <translation>Kunne ikke tildele %s på denne computer. LitecoinDark kører sikkert allerede.</translation>
     </message>
     <message>

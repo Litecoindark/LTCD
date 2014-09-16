@@ -1,3 +1,27 @@
+0.8.7.3 changes
+=============
+- Enforce v2 blocks at height 700000
+- Add `-maxorphantx=<n>` and `-maxorphanblocks=<n>` options for control over the maximum orphan transactions and blocks
+- Stricter memory limits on CNode
+- Upgrade OpenSSL to 1.0.1i (see https://www.openssl.org/news/secadv_20140806.txt - just to be sure, no critical issues
+
+0.8.7.2 changes
+=============
+- Mac and Windows Official Gitian Builds: upgrade to openssl-1.0.1h for CVE-2014-0224
+                   Linux Gitian build uses Lucid 0.9.8k-7ubuntu8.18
+
+0.8.7.1 changes
+=============
+- Mac and Windows Official Gitian Builds: upgrade to openssl-1.0.1g for CVE-2014-0160
+                   Linux was not vulnerable with Lucid openssl-0.9.8k
+                   Older versions were only vulnerable with rarely used RPC SSL
+- If you build from source, be sure that your openssl is patched for CVE-2014-0160.
+- Upgrade openssl, qt, miniupnpc, zlib, libpng, qrencode
+- Many bug fixes from Bitcoin 0.8.7rc stable branch
+    including transaction malleability mitigation backports from 0.9
+- Add testnet checkpoints
+- Add new testnet seed
+
 0.8.6.2 changes
 =============
 
