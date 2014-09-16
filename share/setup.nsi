@@ -1,4 +1,4 @@
-Name Litecoin
+Name LitecoinDark
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -7,7 +7,7 @@ SetCompressor /SOLID lzma
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION 1.1.0.0
 !define COMPANY "LitecoinDark project"
-!define URL http://www.litecoin.org/
+!define URL http://www.litecoindark.com/
 
 # MUI Symbol Definitions
 !define MUI_ICON "../share/pixmaps/bitcoin.ico"
@@ -45,7 +45,7 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile litecoin-${VERSION}-win32-setup.exe
+OutFile litecoindark-${VERSION}-win32-setup.exe
 InstallDir $PROGRAMFILES\LitecoinDark
 CRCCheck on
 XPStyle on
@@ -77,7 +77,7 @@ Section -Main SEC0000
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 
     # Remove old wxwidgets-based-bitcoin executable and locales:
-    Delete /REBOOTOK $INSTDIR\litecoindark.exe
+    Delete /REBOOTOK $INSTDIR\litecoindarkd.exe
     RMDir /r /REBOOTOK $INSTDIR\locale
 SectionEnd
 
@@ -87,7 +87,7 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\LitecoinDark.lnk" $INSTDIR\litecoin-qt.exe
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\LitecoinDark.lnk" $INSTDIR\litecoindark-qt.exe
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall LitecoinDark.lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
