@@ -25,6 +25,8 @@ using namespace boost;
 # error "LitecoinDark cannot be compiled without assertions."
 #endif
 
+#define REDUCED_REWARDS_BLOCK 36000
+
 //
 // Global state
 //
@@ -1117,6 +1119,11 @@ uint256 static GetOrphanRoot(const CBlockHeader* pblock)
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
     int64 nSubsidy = 3200 * COIN;
+	
+	if (nHeight >= REDUCED_REWARDS_BLOCK)
+	{
+		nSubsidy = 96 * COIN;
+	}
 
     // Subsidy is cut in half every 12813 blocks
     nSubsidy >>= (nHeight / 12813);
