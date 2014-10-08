@@ -24,9 +24,6 @@ There are some glaring issues with the codebase, along with quite a lot of room
 for improvements as well as feature additions that could greatly help this
 blockchain survive and thrive in todays crypty economy.
 
-As I have not spoken with the original developer, this fork will remain unofficial
-and will serve as a staging ground for some of the features I would like to see
-implemented as well as features requested by the community at large.
 =======
 
 License
