@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = litecoindark-qt
 macx:TARGET = "LitecoinDark-Qt"
-VERSION = 1.1.2.13
+VERSION = 1.2.2.37
 INCLUDEPATH += src src/json src/qt
 QT += core gui network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
