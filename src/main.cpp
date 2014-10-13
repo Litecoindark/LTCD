@@ -25,6 +25,8 @@ using namespace boost;
 # error "LitecoinDark cannot be compiled without assertions."
 #endif
 
+#define REDUCED_REWARDS_BLOCK		60000
+
 //
 // Global state
 //
@@ -78,6 +80,7 @@ uint64				PastBlocksMax				= PastSecondsMax / BlocksTargetSpacing;
 
 litecoindark::difficulty_shield::legacy_difficulty_engine		legacy_difficulty(nTargetTimespan, nTargetSpacing, nInterval);
 litecoindark::difficulty_shield::kgw_difficulty_engine			kgw_difficulty(nTargetSpacing, PastBlocksMin, PastBlocksMax);
+litecoindark::difficulty_shield::min_difficulty_engine			min_difficulty;
 litecoindark::difficulty_shield::litecoindark_difficulty_engine	ltcd_difficulty;
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
@@ -1116,12 +1119,17 @@ uint256 static GetOrphanRoot(const CBlockHeader* pblock)
 
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 3200 * COIN;
+	int64 nSubsidy = 3200 * COIN;
+	
+	if (nHeight >= REDUCED_REWARDS_BLOCK)
+	{
+		nSubsidy = 256 * COIN;
+	}
 
-    // Subsidy is cut in half every 12813 blocks
-    nSubsidy >>= (nHeight / 12813);
+	// Subsidy is cut in half every 12813 blocks
+	nSubsidy >>= (nHeight / 12813);
 
-    return nSubsidy + nFees;
+	return nSubsidy + nFees;
 }
 
 
@@ -1140,6 +1148,10 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
 	if (false)
 	{
 		return ltcd_difficulty.get_next_work_required(pindexLast, pblock);
+	}
+	else if (pindexLast->nHeight + 1 == REDUCED_REWARDS_BLOCK)
+	{
+		return min_difficulty.get_next_work_required(pindexLast, pblock);
 	}
 	else if (pindexLast->nHeight + 1 >= KGW_ACTIVATION_BLOCK)
 	{
