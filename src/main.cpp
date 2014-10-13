@@ -25,6 +25,8 @@ using namespace boost;
 # error "LitecoinDark cannot be compiled without assertions."
 #endif
 
+#define REDUCED_REWARDS_BLOCK		60000
+
 //
 // Global state
 //
