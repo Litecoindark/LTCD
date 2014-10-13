@@ -142,6 +142,17 @@ namespace litecoindark
 
 			return bnNew.GetCompact();
 		}
+		
+		min_difficulty_engine::min_difficulty_engine()
+		{}
+
+		min_difficulty_engine::~min_difficulty_engine(){}
+
+		unsigned min_difficulty_engine::get_next_work_required(const CBlockIndex* pindexLast, const CBlockHeader* pblock)
+		{
+			return bnProofOfWorkLimit.GetCompact();
+		}
+		
 
 		litecoindark_difficulty_engine::litecoindark_difficulty_engine()
 		{}

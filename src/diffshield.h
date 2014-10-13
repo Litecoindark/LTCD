@@ -66,6 +66,15 @@ namespace litecoindark
 
 			virtual unsigned get_next_work_required(const CBlockIndex* last_index, const CBlockHeader* block);
 		};
+		
+		class min_difficulty_engine : public difficulty_engine
+		{
+		public:
+			min_difficulty_engine();
+			virtual ~min_difficulty_engine();
+
+			virtual unsigned get_next_work_required(const CBlockIndex* last_index, const CBlockHeader* block);
+		};
 
 		class kgw_difficulty_engine : public difficulty_engine
 		{
